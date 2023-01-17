@@ -18,9 +18,14 @@ function Input() {
     }
   }
 
+  function deleteTask(id, e) {
+    var newList = [...list];
+    newList.splice(id, 1);
+    setList([...newList]);
+  }
+
   useEffect(() => {
     setTask("");
-    console.log(list);
   }, [list]);
 
   return (
@@ -42,7 +47,10 @@ function Input() {
               <li key={index}>
                 <ToggleButton></ToggleButton>
                 <p>{item}</p>
-                <AiFillDelete className="deleteButton"></AiFillDelete>
+                <AiFillDelete
+                  className="deleteButton"
+                  onClick={(e) => deleteTask(index, e)}
+                ></AiFillDelete>
               </li>
             );
           })}

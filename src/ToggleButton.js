@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BiRadioCircleMarked } from "react-icons/bi";
 import { BiRadioCircle } from "react-icons/bi";
 

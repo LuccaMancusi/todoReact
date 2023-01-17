@@ -19,6 +19,7 @@
 
 .todo {
   border: 1px solid black;
+  min-width: 420px;
   width: 25%;
   height: 65%;
   background-color: gray;
