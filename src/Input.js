@@ -4,9 +4,7 @@ import { AiFillDelete } from "react-icons/ai";
 
 function Input() {
   const [task, setTask] = useState("");
-  const [list, setList] = useState(
-    JSON.parse(localStorage.getItem("todolist"))
-  );
+  const [list, setList] = useState([]);
 
   function handleTask(e) {
     setTask(e.target.value);
@@ -28,7 +26,6 @@ function Input() {
 
   useEffect(() => {
     setList(JSON.parse(localStorage.getItem("todolist")));
-    console.log(localStorage.getItem("todolist"));
   }, []);
 
   useEffect(() => {
